@@ -1,0 +1,43 @@
+<div id="main"  class="container-fluid bg-body-light py-2">
+  <div class="container">
+   <div class="head">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid logo">
+              <a class="navbar-brand mx-2" href="#">
+                <img src="../../../assets/images/naukri_Logo.png" alt="" srcset="">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse ul-container" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2  mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="jobs" href="javascript:void(0)">Jobs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Companies</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://resume.naukri.com/?fftid=100001">Services</a> 
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" *ngIf="userInfo?.userRole=='Employer'" routerLink="/createnewjob" href="javascript:void(0)">Create New Job</a> 
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" *ngIf="userInfo?.userRole=='Employer'" routerLink="/joblisting" href="javascript:void(0)">Job Listing</a> 
+                  </li>
+                  
+                </ul>
+                <form class="d-flex" role="search">
+                  <a *ngIf="!isLogedIn" class="btn btn-outline-primary login-btn rounded-pill mx-2"  routerLink="login">Login</a>
+                  <a *ngIf="!isLogedIn" class="btn  rounded-pill register-btn" routerLink="register">Register</a>
+                  <a *ngIf="isLogedIn" class="btn btn-link" >{{userInfo?.userName}}</a>
+                  <a *ngIf="isLogedIn" class="btn btn-primary rounded-pill" (click)="Logout()" >Logout</a>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+  </div>
+   
+</div>
