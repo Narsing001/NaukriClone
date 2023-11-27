@@ -1,0 +1,27 @@
+.social-logo ul{
+    list-style:none;
+    display:flex;
+    margin-left:-32px;
+    margin-top:5px;
+}
+
+.social-logo ul li{
+   margin-left:25px;
+}
+.social-logo ul li:first-child{
+    margin-left:0px;
+}
+.footer-uls ul{
+    list-style:none;
+}
+.footer-uls ul li{
+ margin-top:7px;
+ font-weight:600;
+}
+.footer-uls ul li:first-child{
+    margin:0px;
+}
+.pstorelogo{
+    border:1px solid rgb(236, 230, 230);
+    border-radius:10px;
+}

@@ -13,7 +13,10 @@ import { MyJobsComponent } from './pages/my-jobs/my-jobs.component';
 import { RegistraionComponent } from './pages/registraion/registraion.component';
 import { HeaderComponent } from './includes/header/header.component';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FotterComponent } from './includes/fotter/fotter.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +29,16 @@ import {HttpClientModule} from '@angular/common/http'
     LoginComponent,
     MyJobsComponent,
     RegistraionComponent,
-    HeaderComponent
+    HeaderComponent,
+    FotterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule,
+    BrowserAnimationsModule 
     
   ],
   providers: [],

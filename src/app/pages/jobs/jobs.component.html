@@ -1,52 +1,52 @@
-<div class="container pt-3">
+<div class="container pt-md-3">
     <div class="row">
-        <div class="col-3  filter"> 
+        <div class="col-md-3  filter"> 
             <div class="card" style="position:fixed; width:17%">
                 <div class="card-body" >
                     <h6 class="text-center"> All Filter</h6>
                 </div>
             </div>
         </div>
-        <div class="col-6 job">
+        <div class="col-md-6 job">
             <div class="row">
-                <div class="col-12" *ngFor="let jobobj of jobsArray">
+                <div class="col-md-12" *ngFor="let jobobj of jobsArray">
                     <div class="card" (click)="openjob(jobobj.jobId)">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-md-12">
                                     <div class="row">
-                                        <div class="col-8">
+                                        <div class="col-md-8">
                                             <h6>{{jobobj.jobName}}</h6>
                                             <a>{{jobobj.companyName}}</a>
                                         </div>
-                                        <div class="col-4 text-end">
+                                        <div class="col-md-4 text-end">
                                             <img class="company_logo " [src]="jobobj.logoURL" alt="">
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-4">
+                                        <div class="col-md-4">
                                             <i class="fa fa-suitcase" arial-hidden="true"></i> {{jobobj.experience}}
                                         </div>
-                                        <div class="col-4 text-center">
+                                        <div class="col-md-4 text-center">
                                             <i class="fa fa-inr" arial-hidden="true"></i> {{jobobj.package}}
                                         </div>
-                                        <div class="col-4 text-end">
+                                        <div class="col-md-4 text-end">
                                             <i class="fa fa-map-marker" arial-hidden="true"></i> {{jobobj.location}}
                                         </div>
                                     </div>
-                                    <div class="row pt-1">
-                                        <div class="col-12">
+                                    <div class="row pt-md-1">
+                                        <div class="col-md-12">
                                             <i class="fa fa-file-text-o" arial-hiden="true"></i> <span
                                                 class="text-muted">
                                                {{jobobj.categoryName}}
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="row pt-1">
-                                        <div class="col-6">
+                                    <div class="row pt-md-1">
+                                        <div class="col-md-6">
                                             <small>Few Hours Ago</small>
                                         </div>
-                                        <div class="col-6 text-end px-2">
+                                        <div class="col-md-6 text-end px-2">
                                             <i class="fa fa-bookmark" arial-hiden="true"></i> <small> Save</small> 
                                         </div>
                                     </div>
